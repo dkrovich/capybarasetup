@@ -8,7 +8,7 @@
 #
 # To run:
 #
-# $ docker run -p 0.0.0.0:3000:3000 -v /home/kro:/home/kro -i -t testdriven/rubyonrails
+# $ docker run -p 0.0.0.0:3000:3000 -i -t testdriven/rubyonrails
 #
 # From inside the container run: 
 #
