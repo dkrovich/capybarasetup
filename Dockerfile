@@ -49,6 +49,14 @@ RUN rails generate controller items
 
 RUN rails generate rspec:install
 
+# delete auto generated tests
+
+RUN rm -rf spec/views/*
+
+RUN rm -rf spec/controllers/*
+
+RUN rm -rf spec/helpers/*
+
 RUN mkdir spec/features
 
 COPY ./spec/spec_helper.rb spec/spec_helper.rb
@@ -56,5 +64,12 @@ COPY ./spec/spec_helper.rb spec/spec_helper.rb
 COPY ./spec/rails_helper.rb spec/rails_helper.rb
 
 COPY ./spec/features/user_creates_an_item_spec.rb spec/features/user_creates_an_item_spec.rb
+
+RUN rails generate model Item title:string text:text
+
+#delete default test
+RUN rm -rf spec/models/*
+
+RUN rake db:migrate RAILS_ENV=test
 
 CMD /bin/bash

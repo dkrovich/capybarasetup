@@ -1,7 +1,11 @@
 # capybarasetup 
 
-Sets up docker container of a proof of concept ruby on
-rails application to show capybara and rspec in action.
+Sets up docker container of a proof of concept ruby on rails
+application to show capybara and rspec in action.  In particular this
+focuses on an example feature test that attempts to simulate an
+external user browing and using an application.  All other default
+tests that are generated are deleted via RUN commands in the
+Dockerfile.
 
 ## Setup
 
@@ -27,6 +31,13 @@ rails application to show capybara and rspec in action.
 
 
 ## Usage notes
+
+* To run the reference application, just fire up WebRick from the
+  application base directory.
+
+```
+$ rails s
+```
 
 * If you want to have data persist in the database instead of being
   reset after rspec runs, change this setting in
