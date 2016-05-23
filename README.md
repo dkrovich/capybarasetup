@@ -1,4 +1,32 @@
-# capybarasetup
+# capybarasetup 
+
+Sets up docker container of a proof of concept ruby on
+rails application to show capybara and rspec in action.
+
+## Setup
+
+1. From the base directory build the docker container with the Dockerfile
+
+```
+$ docker build -t testdriven/rubyonrails .
+```
+
+2. Run the container
+
+```
+$ docker run -p 0.0.0.0:3000:3000 -i -t testdriven/rubyonrails
+```
+
+3. Execute tests
+
+```
+$ coming soon
+```
+
+
+
+# old docs
+
 Sets up a environment that can support capybara and rspec running on Ubuntu 14.04  in a Docker Container. 
 
 Ever wanted to use Capybara with Rspec and had problems getting it working?  If so this guide might be of some help.
