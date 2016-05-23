@@ -18,8 +18,6 @@
 #
 FROM ubuntu:14.04
 
-EXPOSE 3000
-
 RUN mkdir /railsapps
 
 WORKDIR /railsapps
@@ -37,6 +35,24 @@ RUN rails new testdriven
 
 COPY ./Gemfile testdriven/
 
-RUN cd testdriven && bundle install
+WORKDIR /railsapps/testdriven
+
+RUN bundle install
+
+RUN rails generate controller welcome index
+
+COPY ./app/views/welcome/index.html.erb app/views/welcome/index.html.erb
+
+COPY ./config/routes.rb config/routes.rb
+
+RUN rails generate controller items
+
+RUN rails generate rspec:install
+
+RUN mkdir spec/features
+
+COPY ./spec/spec_helper.rb spec/spec_helper.rb
+
+COPY ./spec/rails_helper.rb spec/rails_helper.rb
 
 CMD /bin/bash
