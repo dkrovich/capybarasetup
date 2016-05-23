@@ -20,7 +20,9 @@ FROM ubuntu:14.04
 
 EXPOSE 3000
 
-WORKDIR /home/kro/rails/testdriven
+RUN mkdir /railsapps
+
+WORKDIR /railsapps
 
 RUN apt-get update && apt-get install -y ruby \
     ruby-dev \
@@ -30,5 +32,11 @@ RUN apt-get update && apt-get install -y ruby \
     git \
     libmysqld-dev \
     emacs
+
+RUN rails new testdriven
+
+COPY ./Gemfile testdriven/
+
+RUN cd testdriven && bundle install
 
 CMD /bin/bash
