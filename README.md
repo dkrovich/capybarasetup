@@ -23,6 +23,20 @@ rails application to show capybara and rspec in action.
  $ coming soon
  ```
 
+## Usage notes
+
+* If you want to have data persist in the database, change this in
+spec/rails_helper
+
+```
+config.use_transactional_fixtures = false
+```
+
+* To manually reset your database
+
+```
+$ RAILS_ENV=test rake db:reset
+```
 
 
 # old docs
@@ -72,12 +86,4 @@ At the top add:
 require 'rails_helper'
 require 'spec_helper'
 
-9) If you want to have data persist in the database, change this in
-spec/rails_helper
-
-config.use_transactional_fixtures = false
-
-10) To manually reset your database
-
-RAILS_ENV=test rake db:reset
 
