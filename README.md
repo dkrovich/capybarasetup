@@ -35,6 +35,10 @@ away.  Aka, test driven development.
  $ rspec
  ```
 
+ Note running rspec will produce a screenful of error messages.  This
+ is by design.  As stated above, the challenge is to write code to
+ make the tests pass.
+
 
 ## Usage notes
 
