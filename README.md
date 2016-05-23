@@ -7,21 +7,21 @@ rails application to show capybara and rspec in action.
 
 1. From the base directory build the docker container with the Dockerfile
 
-*```
-$ docker build -t testdriven/rubyonrails .
-```
+ ```
+ $ docker build -t testdriven/rubyonrails .
+ ```
 
 2. Run the container
 
-```
-$ docker run -p 0.0.0.0:3000:3000 -i -t testdriven/rubyonrails
-```
+ ```
+ $ docker run -p 0.0.0.0:3000:3000 -i -t testdriven/rubyonrails
+ ```
 
 3. Execute tests
 
-```
-$ coming soon
-```
+ ```
+ $ coming soon
+ ```
 
 
 
