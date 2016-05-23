@@ -26,7 +26,7 @@ rails application to show capybara and rspec in action.
 ## Usage notes
 
 * If you want to have data persist in the database, change this in
-spec/rails_helper
+spec/rails_helper.rb
 
 ```
 config.use_transactional_fixtures = false
