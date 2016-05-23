@@ -55,4 +55,6 @@ COPY ./spec/spec_helper.rb spec/spec_helper.rb
 
 COPY ./spec/rails_helper.rb spec/rails_helper.rb
 
+COPY ./spec/features/user_creates_an_item_spec.rb spec/features/user_creates_an_item_spec.rb
+
 CMD /bin/bash

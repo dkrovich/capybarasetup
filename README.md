@@ -19,9 +19,12 @@ rails application to show capybara and rspec in action.
 
 3. Execute tests
 
+ From the rails application base directory run
+
  ```
- $ coming soon
+ $ rspec
  ```
+
 
 ## Usage notes
 
