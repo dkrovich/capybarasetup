@@ -7,6 +7,12 @@ external user browing and using an application.  All other default
 tests that are generated are deleted via RUN commands in the
 Dockerfile.
 
+To really bring the concept of test driven development home, the
+application is not fully developed.  Running rspec will generate
+failures.  The challenge is to fill in the code to make the error go
+away.  Aka, test driven development.
+
+
 ## Setup
 
 1. From the base directory build the docker container with the Dockerfile
