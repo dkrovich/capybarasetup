@@ -26,7 +26,7 @@ rails application to show capybara and rspec in action.
 ## Usage notes
 
 * If you want to have data persist in the database instead of being
-  reset after spec runs then, change this setting in
+  reset after rspec runs, change this setting in
   spec/rails_helper.rb
 
 ```
