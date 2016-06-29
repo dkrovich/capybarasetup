@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe "Create a item", :type => feature do
   it "Creates a item" do
     visit "items/new"
